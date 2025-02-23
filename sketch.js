@@ -73,7 +73,7 @@ function hideLogin() {
 
 function checkAdmin() {
     var password = document.getElementById("adminPassword").value;
-    if (password === "101112" || password === "912" || password === "69420") {
+    if (password === "101112" || password === "kingiscool" || password === "69420") {
         document.getElementById("adminLogin").style.display = "none"; // Hide login box
         var adminPanel = document.getElementById("adminPanel");
         adminPanel.style.display = "block"; // Show admin panel
