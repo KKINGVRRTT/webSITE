@@ -1,0 +1,281 @@
+@font-face {
+  font-family: "daydream";
+  src: url("/assets/fonts/Daydream.woff2");
+}
+@font-face {
+  font-family: "jetbrainsmono";
+  src: url("/assets/fonts/JetBrains_Mono.woff2");
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #3b002e, #004c3f, #000c46, #3b002e);
+  background-size: 400%;
+  animation: background_slide 60s infinite linear;
+  overflow-x: hidden;
+}
+
+.maincontent {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+.maincontent .title {
+  font-family: "daydream";
+  color: white;
+  text-align: center;
+  font-size: min(max(3.5vh, 3.5vw), 5vh);
+  letter-spacing: 0.5vw;
+}
+.maincontent .title span {
+  display: inline-block;
+  transform: translateY(-50vh);
+}
+.maincontent .title span:nth-of-type(1) {
+  animation: slideInTop 1s ease-in-out forwards 0.125s, bounce 0.9s ease-in-out infinite 2.6s, colors 10s linear infinite 2.1s;
+}
+.maincontent .title span:nth-of-type(2) {
+  animation: slideInTop 1s ease-in-out forwards 0.25s, bounce 0.9s ease-in-out infinite 2.7s, colors 10s linear infinite 2.2s;
+}
+.maincontent .title span:nth-of-type(3) {
+  animation: slideInTop 1s ease-in-out forwards 0.375s, bounce 0.9s ease-in-out infinite 2.8s, colors 10s linear infinite 2.3s;
+}
+.maincontent .title span:nth-of-type(4) {
+  animation: slideInTop 1s ease-in-out forwards 0.5s, bounce 0.9s ease-in-out infinite 2.9s, colors 10s linear infinite 2.4s;
+}
+.maincontent .title span:nth-of-type(5) {
+  animation: slideInTop 1s ease-in-out forwards 0.625s, bounce 0.9s ease-in-out infinite 3s, colors 10s linear infinite 2.5s;
+}
+.maincontent .title span:nth-of-type(6) {
+  animation: slideInTop 1s ease-in-out forwards 0.75s, bounce 0.9s ease-in-out infinite 3.1s, colors 10s linear infinite 2.6s;
+}
+.maincontent .title span:nth-of-type(7) {
+  animation: slideInTop 1s ease-in-out forwards 0.875s, bounce 0.9s ease-in-out infinite 3.2s, colors 10s linear infinite 2.7s;
+}
+.maincontent .title span:nth-of-type(8) {
+  animation: slideInTop 1s ease-in-out forwards 1s, bounce 0.9s ease-in-out infinite 3.3s, colors 10s linear infinite 2.8s;
+}
+.maincontent #mainImg {
+  width: 25vw;
+  position: absolute;
+  left: -25vw;
+  animation: mainImgSlideIn 2s ease-in-out forwards, boxShadowChange 0.5s forwards ease-in-out 2s;
+  box-shadow: 0px 0px 0px #000000;
+  top: 27vh;
+  border-radius: 0%;
+  border: none;
+  transition: all 0.5s ease-in-out;
+}
+.maincontent .maintext {
+  font-family: "jetbrainsmono";
+  font-size: min(max(1.5vh, 1.5vw), 2vh);
+  text-align: justify;
+  color: white;
+  transform: translateX(100vw);
+  animation: slideInRight 2s ease-in-out forwards;
+}
+.maincontent .maintext p {
+  margin-left: 28vw;
+  margin-right: 1vw;
+  margin-top: 1vh;
+}
+.maincontent .maintext p a {
+  transition: color 0.5s ease-in-out;
+}
+.maincontent .maintext p a:hover {
+  color: rgb(0, 225, 255);
+  cursor: default;
+}
+.maincontent .announcements {
+  width: 50vw;
+  max-width: 80vw;
+  height: 35vh;
+  max-height: 45vh;
+  margin: 2vh auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-right: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid white;
+  box-shadow: 0px 10px 0px #FFF;
+  border-radius: 10px;
+  padding: 1vh 2vw;
+  color: white;
+  font-family: "jetbrainsmono";
+  font-size: min(max(1.25vh, 1.25vw), 1.75vh);
+  transform: translateX(100vw);
+  animation: slideInRight 2s ease-in-out forwards;
+}
+.maincontent .announcements h1 {
+  font-family: "daydream";
+  text-align: center;
+  font-size: min(max(2vh, 2vw), 2.5vh);
+}
+.maincontent .announcements::-webkit-scrollbar {
+  width: 10px;
+}
+.maincontent .announcements::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+.maincontent .announcements::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+.maincontent .announcements::-webkit-scrollbar-thumb:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+.maincontent .announcements p {
+  margin: 1vh 0;
+  line-height: 1.5;
+}
+
+footer {
+  width: 100vw;
+  height: 5vh;
+  opacity: 0.5;
+  position: fixed;
+  font-size: min(max(1.25vh, 1.25vw), 1.5vh);
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  font-family: "jetbrainsmono";
+  color: white;
+  background-color: #363636;
+}
+
+nav {
+  width: 100vw;
+  height: 8vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  padding: 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  gap: 4.5vw;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #0023d4, #00bf9f, #b3008c, #0023d4);
+  background-size: 400%;
+  animation: background_slide 70s linear infinite;
+}
+nav ul li {
+  font-family: "jetbrainsmono";
+  color: white;
+}
+nav ul li a {
+  text-decoration: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+nav ul li a i {
+  font-size: 3vh;
+}
+nav ul li a span {
+  font-size: min(max(1.5vh, 1.5vw), 2.25vh);
+}
+nav ul li a:hover {
+  color: #000000;
+  font-weight: 1000;
+  transition: all 0.1s ease-in-out;
+}
+
+@media (max-width: 830px) {
+  nav ul li a span {
+    display: none;
+  }
+  nav ul li a i:nth-of-type(2) {
+    display: none;
+  }
+  #mainImg {
+    display: none;
+  }
+  .maincontent .maintext p {
+    margin: 1vw;
+  }
+  .maincontent .announcements {
+    width: 100vw;
+    margin-right: auto;
+  }
+}
+@media (max-width: 1024px) {
+  nav ul li a span {
+    font-size: min(max(1.25vh, 1.25vw), 1.75vh);
+  }
+  .maincontent .maintext p {
+    margin-top: 2vh;
+  }
+}
+@media (min-width: 2000px) {
+  .maincontent .maintext {
+    font-size: min(max(1.75vh, 1.75vw), 2.25vh);
+  }
+}
+@keyframes background_slide {
+  from {
+    background-position-x: 0%;
+  }
+  to {
+    background-position-x: 400%;
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0vh);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(2vh);
+    opacity: 0.25;
+  }
+}
+@keyframes slideInTop {
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes mainImgSlideIn {
+  100% {
+    left: 1vw;
+  }
+}
+@keyframes slideInRight {
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes colors {
+  0%, 100% {
+    color: white;
+  }
+  25% {
+    color: #00d443;
+  }
+  50% {
+    color: #00bf9f;
+  }
+  75% {
+    color: #0092b3;
+  }
+}
+@keyframes boxShadowChange {
+  100% {
+    box-shadow: 10px 10px 50px #000000;
+    border-radius: 20px;
+    border: #000000 5px solid;
+  }
+}/*# sourceMappingURL=main.css.map */
