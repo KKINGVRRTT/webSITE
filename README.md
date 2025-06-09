@@ -14,3 +14,5 @@ kkingvrr is a website dedicated to sharing resources, updates, and information a
 - Intuitive navigation
 - Clean, modern interface
 - Regularly updated content about kkingvrr
+
+![KKINGVRR](assets/images/kingy.png)
